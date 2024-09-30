@@ -22,24 +22,31 @@ h1 {
 
 .show-data img {
     display: block;
-    margin: auto;
+    margin: auto; /* center on mobile */
 }
 
-.show-info {
-    text-align: center;
-    color: #314369;
-}
-
+/* Ensure proper styling for desktop */
 @media (min-width: 800px) {
     .show-data {
         display: flex;
     }
+
+    /* Set proper image margin for desktop */
+    .show-data img {
+        margin: 0; /* Remove auto margins on desktop */
+    }
+
     .show-info {
         padding: 10px;
     }
 }
 
+/* Media query for mobile screens */
 @media (max-width: 800px) {
+    .show-data img {
+        margin: auto; /* Ensure images are centered on mobile */
+    }
+
     .show-info p {
         text-align: center;
         padding: 10px;
